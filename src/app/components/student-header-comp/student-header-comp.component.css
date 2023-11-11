@@ -1,0 +1,8 @@
+.nav-link:hover {
+    background-image: linear-gradient(to bottom, #610dcd, #6c63ff);
+    background-clip: text;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: transparent;
+    transition: background-position 0.3s;
+  }
