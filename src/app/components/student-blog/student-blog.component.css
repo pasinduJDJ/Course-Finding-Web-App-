@@ -1,0 +1,42 @@
+.main-bg{
+    width: 100%;
+    height: auto;
+}
+.header-panel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    padding-bottom:10vh ;
+}
+.custom-search-bar {
+    width: 70%;
+  margin: 20px auto;
+  
+}
+.icon-button {
+  margin-left: 18px;
+  margin-right: 8px;
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+}
+.header-custom {
+  width: 100%;
+}
+.form-control {
+    width: 600px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(97, 13, 205, 0.1);
+  padding: 15px;
+  height: 50px;
+  border-top-right-radius: 0; /* Reset Bootstrap styling for right corners */
+  border-bottom-right-radius: 0;
+}
+.courses-card{
+    padding: 20px;
+}
+.course-panel{
+    padding-bottom: 10vh;
+}

@@ -1,0 +1,46 @@
+<div class="container main-bg bg-light" >
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/institute"></i>
+        </div>
+    </div>
+
+    <!-- Heading Component -->
+    <div class="container content-comp">
+        <div class="col-2 mt-2 title-comp-bg imgbox">
+            <img [src]="institutes.insImage"
+                width="200px" height="200px">
+
+        </div>
+        <div class="col-8 mt-2 title-comp-bg">
+            <h4 class="medium-text">{{institutes.insName}}</h4>
+            <h6 class="medium-text">{{institutes.location}}</h6>
+        </div>
+    </div>
+
+    <!-- over view text -->
+    <div class="col overviewText ps-5 pt-5">
+        <p>The NIBM with its legacy of more than four decades in the business of training and development and its vision
+            of becoming the best management education institute in Sri Lanka offers you unmatched opportunities in
+            management and IT education in Sri Lanka. The stability of being a government institute and the customer
+            driven philosophy of the private sector, which we have adopted, means that well recognized qualifications at
+            reasonable cost are being offered to the employed as well as to the school leaver in order to obtain the
+            knowledge as well as the practical aspects needed for professional and personal development. Currently NIBM,
+            Operate as a Statuary body under Ministry of Youth Affaires and Skills Development.
+            In the discipline IT we offer a Higher Diploma, Diplomas and many Certificate courses to cater to different
+            needs as well as to ensure students will be able to gain a well recognized education Qualifications.
+            In the field of management and productivity the NIBM offers the mature and employed student the opportunity
+            to obtain well recognized qualifications in diverse fields through twelve diploma programs conducted in the
+            English and Sinhala media as well as the numerous Certificate and short term courses available. We also
+            cater to specific needs of the industry through customized training programs and through consultancy
+            assignments.
+            Our main campus at Colombo and our regional centers in Kandy, Kurunagala and Galle ensure that quality
+            training is available through NIBM to a wider range and a greater number of our valued students.
+            The NIBM looks towards the future with excitement, hope and optimism and invites you to build your
+            competencies and be a part of our success story.</p>
+    </div>
+
+    <div style="padding-bottom: 1rem;">
+        <app-student-title-with-content title="Contact Details" content="Mobile : +94 11 7 321000 , Site : http://www.nibm.lk"></app-student-title-with-content>
+    </div>
+</div>

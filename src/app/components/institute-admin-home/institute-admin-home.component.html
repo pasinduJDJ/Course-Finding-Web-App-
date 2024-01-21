@@ -1,0 +1,39 @@
+<div class="container main-bg bg-light">
+
+    <!-- Heading Component -->
+    <div class="container  content-comp ">
+        <div class="col-2 mt-2 title-comp-bg imgbox">
+            <img [src]="institute.insImage"
+                width="200px" height="200px">
+
+        </div>
+        <div class="col-7 mt-2 title-comp-bg">
+            <h4 class="medium-text">{{institute.insName}}
+            </h4>
+            <h6 class="medium-text">{{institute.location}}
+            </h6>
+        </div>
+        <div class="col-2">
+            <app-student-btn1-comp text="Update" routerLink="/instituteEditHome"></app-student-btn1-comp>
+        </div>
+    </div>
+
+    <!-- over view text -->
+    <div class="col overviewText ps-5 pt-5">
+        <p>{{institute.overview}}</p>
+    </div>
+
+    <app-student-title-with-content [title]="'Bank Contact Details '"></app-student-title-with-content>
+    <p class="ps-5">Mobile Number:  {{institute.insMobile}}</p>
+    <p class="ps-5">Web Site:  {{institute.insWebsite}}</p>
+    <p class="ps-5">Email Adddress:  {{institute.insEmail}}</p>
+
+    <app-student-title-with-content [title]="'Recommanded Bank For Student Loan'"></app-student-title-with-content>
+    <p class="ps-5 pb-5">{{institute.recommendedBankNo}}</p>
+
+    <div class="col course-panel">
+        <div class="col courses-card" *ngFor="let course of courses">
+            <app-course-card [course]="course"> </app-course-card>
+          </div>
+    </div>
+</div>

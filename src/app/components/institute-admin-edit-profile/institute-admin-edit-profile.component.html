@@ -1,0 +1,89 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <p>Edit Profile</p>
+        </div>
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/instituteHome"></i>
+        </div>
+    </div>
+    <div class="container form-bg">
+        <form class="col-10 mt-5 ">
+            <!-- <form class="col-10 mt-5 " [formGroup]="myForm" (ngSubmit)="onSubmit()"> -->
+
+            <div class="mb-3">
+                <label for="instituteName" class="form-label">Institute Name </label>
+                <input type="text" class="form-control" id="instituteName">
+                <!-- <div *ngIf="isFieldInvalid('instituteName')" class="invalid-feedback">
+                    Institute Name is required.
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for="instituteLogoUrl" class="form-label">Institute Logo Url </label>
+                <input type="text" class="form-control" id="instituteLogoUrl">
+                <!-- <div *ngIf="isFieldInvalid('instituteLogoUrl')" class="invalid-feedback">
+                    Institute Logo Url is required.
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for="instituteDetails">Institute Details</label>
+                <textarea class="form-control" id="instituteDetails" rows="10"></textarea>
+                <!-- <div *ngIf="isFieldInvalid('instituteLogoUrl')" class="invalid-feedback">
+                    Institute Details is required.
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for="insMobile" class="form-label">Institute Mobile Number </label>
+                <input type="text" class="form-control" id="insMobile">
+                <!-- <div *ngIf="isFieldInvalid('insMobile')" class="invalid-feedback">
+                    Institute HotLine Number is required.
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for="insWeb" class="form-label">Institute Web Site </label>
+                <input type="text" class="form-control" id="insWeb">
+                <!-- <div *ngIf="isFieldInvalid('insWeb')" class="invalid-feedback">
+                    Institute Web Site Url is required.
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for="insLocation" class="form-label">Branches </label>
+                <input type="text" class="form-control" id="insLocation">
+                <!-- <div>div *ngIf="isFieldInvalid('insLocation')" class="invalid-feedback">
+                    Institute Branches are required.
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for="insBank" class="form-label">Available Banks for Loan </label>
+                <input type="text" class="form-control" id="insBank">
+                <!-- <div *ngIf="isFieldInvalid('insBank')" class="invalid-feedback">
+                    What Bank Loans are You Recommend .
+                </div> -->
+            </div>
+            <!-- Dropdown -->
+            <!-- <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Centered dropdown
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action two</a></li>
+                  <li><a class="dropdown-item" href="#">Action three</a></li>
+                </ul>
+              </div>  -->
+
+            <div class="btn-bg mt-5 mb-4">
+                <app-student-btn1-comp [text]="'Done'"></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Clear all'"></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Cancel'"></app-student-btn1-comp>
+            </div>
+
+            <br>
+        </form>
+        <br>
+    </div>
+
+
+</div>
+
+
+<!-- want add Drop down menu and validate the form  -->

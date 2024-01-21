@@ -1,0 +1,38 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/adminBankLoans"></i>
+        </div>
+    </div>
+    <div class="container content-comp">
+        <div class="col-2 mt-2 title-comp-bg imgbox">
+            <img [src]="banks.bankLogo" width="200px" height="200px">
+
+        </div>
+        <div class="col-8 mt-2 title-comp-bg">
+            <h4 class="medium-text">{{banks.bankName}}</h4>
+            <p style="margin-top: 15px;">{{banks.overview}}</p>
+        </div>
+    </div>
+
+    <app-student-title-with-content title="Eligibility"
+        content="{{banks.eligibility}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Loan Amount"
+        content="{{banks.loanAmount}}"></app-student-title-with-content>
+
+        <app-student-title-with-content title="RePayment Period"
+        content="{{banks.repaymentPeriod}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Required Document"
+        content="{{banks.requirement}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Contact Details"
+        content="Main Hotline : {{banks.mobileNo}} , Site : {{banks.website}}"></app-student-title-with-content>
+
+    <br>
+</div>
+<div class="container request-bg">
+    <button class="btn custom-button ps-5 pe-5 pb-2 pt-2" routerLink="/admin/{{banks.id}}/editBanks">Edit</button>
+    <button class="btn custom-button ps-5 pe-5 pb-2 pt-2" (click)="deleteBanks($event,banks.id)">Delete</button>
+</div>

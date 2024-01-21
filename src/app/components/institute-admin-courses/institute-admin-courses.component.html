@@ -1,0 +1,12 @@
+<div class="container main-bg">
+
+    <app-title-with-content-btn routerLink="/AddCourse" [title]="'Courses'" [btntext]="'Add'"></app-title-with-content-btn>
+
+    <!-- Courses Row -->
+    <div class="col course-panel">
+        <div class="col courses-card" *ngFor="let course of courses">
+            <app-course-card [course]="course"></app-course-card>
+        </div>
+    </div>
+
+</div>

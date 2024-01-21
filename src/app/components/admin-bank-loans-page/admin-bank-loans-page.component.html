@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="main-bg  mt-5 mb-3">
+        <div class="row">
+            <div class="head-banner-bg">
+                <div class="col-4 row-grid">
+                    <app-admin-card1-comp [no]="noOfBlogs" [text]="'Bank'"></app-admin-card1-comp>
+                </div>
+                <div class="col-4 row-grid">
+                    <app-admin-btn1-comp routerLink="/addBankLoans" [btntext]="'Create New Bank Loans'"></app-admin-btn1-comp>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-student-title-with-content [title]="'Bank Loans'"></app-student-title-with-content>
+        <div class="row main-institute-comp ">
+            <div class="menu-grid " >
+                <div *ngFor="let bank of banks">
+                    <app-card-bank  [bank]="bank" > </app-card-bank>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+.lgbox {
+  width: 1200px;
+  height: 190px;
+  background: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.lgbox:hover {
+  color: white;
+  background: linear-gradient(to bottom, #610dcd, #6c63ff);
+}
+
+.imgbox {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.fullbox {
+  width: 1000px;
+  height: 140px;
+}
+.box1 {
+  width: 1000px;
+}
+.titletext {
+  height: 30px;
+  font-weight: 700;
+  font-size: 17px;
+}
+.titletext.b {
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+}
+.titletext:hover {
+  color: White;
+}
+.ratetext {
+  display: flex;
+  align-items: center;
+  margin-bottom: auto;
+}
+.custom-button {
+  background: linear-gradient(to bottom, #ff0844, #ff8465);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 40px;
+  padding-right: 40px;
+  font-size: 14px;
+}

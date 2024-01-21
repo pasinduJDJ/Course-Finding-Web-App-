@@ -1,0 +1,45 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/jobs"></i>
+        </div>
+    </div>
+
+    <!-- Heading Component -->
+    <div class="container content-comp">
+        <div class="col-2 mt-2 title-comp-bg imgbox">
+            <img [src]="jobs.jobImage"
+                width="200px" height="200px">
+
+        </div>
+        <div class="col-8 mt-2 title-comp-bg">
+            <h4 class="medium-text">{{jobs.jobTitle}}</h4>
+        </div>
+    </div>
+
+    <!-- over view text -->
+    <div class="col overviewText ps-5 pt-5">
+        <p>{{jobs.overview}}</p>
+    </div>
+
+    <app-student-title-with-content title="Job Type" content="{{jobs.jobMode}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Position"
+        content="{{jobs.position}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Job Mode" content="{{jobs.jobType}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Income" content="{{jobs.income}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Qualifications"
+        content="{{jobs.qulification}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="Interested applicants send us your CV"
+        content=" Email: {{jobs.jobEmail}} ,  Company Mobile Number: {{jobs.companyMoblie}}">
+    </app-student-title-with-content>
+    <br>
+</div>s
+<div class="container request-bg">
+    <button class="btn custom-button  ps-5 pe-5 pb-2 pt-2" routerLink="/admin/{{jobs.id}}/editJobs">Edit</button>
+    <button class="btn custom-button ps-5 pe-5 pb-2 pt-2" (click)="deleteJob($event,jobs.id)">Delete</button>
+</div>

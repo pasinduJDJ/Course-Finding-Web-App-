@@ -1,0 +1,27 @@
+.main-bg {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.head-banner-bg {
+  width: 1000px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+.row-grid {
+  display: grid;
+  row-gap: 20px;
+}
+.custom-table {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.custom-table thead th {
+  background-color: #f8f9fa;
+}

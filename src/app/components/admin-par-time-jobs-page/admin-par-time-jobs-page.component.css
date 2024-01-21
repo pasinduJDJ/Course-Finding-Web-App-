@@ -1,0 +1,26 @@
+.main-bg {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .head-banner-bg {
+    width: 1000px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+  .row-grid {
+    display: grid;
+    row-gap: 20px;
+  }
+  .courses-card {
+    padding: 20px;
+  }
+  .course-panel {
+    padding-bottom: 5px;
+  }
+  

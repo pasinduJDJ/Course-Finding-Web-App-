@@ -1,0 +1,32 @@
+<div class="container  lgbox" >
+    <div class="imgbox">
+        <img  [src]="blog.blogImage" width="150px" height="150px" >
+    </div>
+    <div class="container fullbox">
+        <div class="row ">
+            <div class="col titletext mb-1">
+                <p>{{blog.blogTopic}}</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col unioveralltext">
+                <p>{{blog.blogName}}</p>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row box1">
+            <div class="col finalrow">
+                <p>{{blog.publishDate}}</p>
+            </div>
+            <div class="col-3 button" *ngIf="this.userService.isAdmin">
+                <a class="btn custom-button" routerLink="/admin/{{blog.id}}/manageBlogs">see more..</a>
+            </div>
+            <div class="col-3 button" *ngIf="!this.userService.isLoggedIn" >
+                <a class="btn custom-button" routerLink="/student/{{blog.id}}/fullBlog" >see more..</a>
+            </div>
+        </div>
+    </div>
+</div>
+

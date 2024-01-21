@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="head-text col-12">
+        <h4>Course Provider Login</h4>
+        <p>Can be accessed only by pre-decided users. So are you an Agent of an Educational Institute or a part-time job
+            Provider, Contact our team. (+94 11 7 321000)</p>
+    </div>
+    <div class="line">
+        <div class="box"></div>
+    </div>
+    <div class="form-feild mt-4" (submit)="login()">
+        <form class="col-4">
+            <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">User name</label>
+                <input type="name" class="form-control " [(ngModel)]="username" name="username" id="username">
+            </div>
+            <div>
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" [(ngModel)]="userpassword" name="userpassword" id="userpassword">
+            </div>
+            <div class="mb-4 form-check" style="margin-left: 17rem;">
+                <a href="/login" class="btn btn-text">Forget Password</a>
+            </div>
+            <div class="d-flex justify-content-center mb-3 mb-lg-4 btn-subs">
+                <button type="submit" class="btn custom-button">Login</button>
+            </div>
+        </form>
+    </div>
+    <br>
+
+</div>

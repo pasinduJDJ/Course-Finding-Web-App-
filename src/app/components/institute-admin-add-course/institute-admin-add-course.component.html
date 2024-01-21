@@ -1,0 +1,103 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <p>Add New Course</p>
+        </div>
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/adminCourses"></i>
+        </div>
+    </div>
+    <div class="container form-bg">
+        <form class="col-10 mt-5 " (ngSubmit)="createCourses()">
+            <div class="mb-3">
+                <label for="instituteName" class="form-label">Institute Name </label>
+                <input type="text" class="form-control" [(ngModel)]="instituteName" name="instituteName" >
+            </div>
+            <div class="mb-3">
+                <label for="courseName" class="form-label">Course Name</label>
+                <input type="text" class="form-control" [(ngModel)]="courseName" name="courseName" >
+            </div>
+            <div class="mb-3">
+                <label for="courseName" class="form-label">Course Overall Idea</label>
+                <input type="text" class="form-control" [(ngModel)]="overallidea" name="overallidea" >
+            </div>
+            <div class="mb-3">
+                <label for="courseImageUrl">Course Image Url</label>
+                <input type="text" class="form-control" [(ngModel)]="courseImage" name="courseImage" />
+            </div>
+            <div class="mb-3">
+                <label for="awrdUni" class="form-label">Awarded University </label>
+                <input type="text" class="form-control"[(ngModel)]="awardedUni" name="awardedUni" >
+            </div>
+            <div class="mb-3">
+                <label for="awardUniImg" class="form-label">Awarded Uni Image Url</label>
+                <input type="text" class="form-control"[(ngModel)]="awardedUniImage" name="awardedUniImage" >
+            </div>
+            <div class="mb-3">
+                <label for="awardUniRank" class="form-label">Awarded Uni world Ranking</label>
+                <input type="text" class="form-control" [(ngModel)]="worldRanking" name="worldRanking" >
+            </div>
+            <div class="mb-3">
+                <label for="awardUniRank" class="form-label">Is It Recognized</label>
+                <input type="text" class="form-control" [(ngModel)]="worldRanking" name="worldRanking" >
+            </div>
+            <div class="pt-3 pb-2 text-primary">Course Related Details</div>
+
+            <div class="">
+                <label for="relatedIndustry" class="form-label">Related Industry</label>
+                <input type="text" class="form-control" [(ngModel)]="relatedIndustry" name="relatedIndustry" placeholder="Ex:Engineering,Architecture,Actuarial Science etc..">
+            </div>
+
+            <div class="">
+                <label for="programType" class="form-label">Program Type</label>
+                <input type="text" class="form-control" [(ngModel)]="programmeType" name="programmeType" placeholder="Ex:Diploma Program,Degree Program,Certificate Program etc..">
+            </div>
+            <div class="">
+                <label for="programTime" class="form-label">Program Time</label>
+                <input type="text" class="form-control" [(ngModel)]="programmeTime" name="programmeTime" placeholder="Ex:Part Time or Full Time">
+            </div>
+            <div class="">
+                <label for="program" class="form-label">Program</label>
+                <input type="text" class="form-control" [(ngModel)]="programme" name="programmeTime" placeholder="Ex:Computer Science , Software Engineering , cyber security etc ..">
+            </div>
+
+            <div>
+                <label for="EnteryReqCheck" class="form-label">Entry Requirment</label>
+                <textarea class="form-control" [(ngModel)]="entryRequirement" name="entryRequirement" rows="4"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="courseStructure">Course Structure</label>
+                <textarea class="form-control" [(ngModel)]="courseStructure" name="courseStructure" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="courseFee">Course Fee</label>
+                <textarea class="form-control" [(ngModel)]="fees" name="fees" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="commencement" class="form-label">Commencement </label>
+                <input type="text" class="form-control" [(ngModel)]="commencement" name="commencement">
+            </div>
+            <div class="mb-3">
+                <label for="courseName" class="form-label">Course Duration</label>
+                <input type="text" class="form-control" [(ngModel)]="coursetime" name="coursetime" >
+            </div>
+            <div class="mb-3">
+                <label for="instituteName" class="form-label">Institute Register number </label>
+                <input type="text" class="form-control" [(ngModel)]="insId" name="insId" >
+            </div>
+
+            <div class="btn-bg mt-5 mb-4">
+                <button type="submit" class="btn custom-button">Submit</button>
+                <button  class="btn custom-button">Clear All</button>
+                <button class="btn custom-button" (click)="navigateTocourse()">Cancel</button>
+                <!-- <app-student-btn1-comp [text]="'Done'"></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Clear all'"></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Cancel'"></app-student-btn1-comp> -->
+            </div>
+
+            <br>
+        </form>
+        <br>
+    </div>
+</div>

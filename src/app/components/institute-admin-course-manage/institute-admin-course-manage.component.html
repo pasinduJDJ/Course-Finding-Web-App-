@@ -1,0 +1,81 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/courses"></i>
+        </div>
+    </div>
+
+    <!-- Heading Component -->
+    <div class="container content-comp">
+        <div class="col-2 mt-2 title-comp-bg imgbox">
+            <img [src]="courses.courseImage" width="200px" height="200px">
+
+        </div>
+        <div class="col-8 mt-2 title-comp-bg">
+            <h4 class="medium-text">{{courses.courseName}}</h4>
+            <h6 class="medium-text">{{courses.instituteName}}
+            </h6>
+        </div>
+    </div>
+
+    <!-- overview components -->
+    <div class="container box-comp">
+        <!-- Box child award uni Comp -->
+        <div class="col-3  box-child-comp">
+            <div class="container box-child-awrd-rec-comp pt-3">
+                <img src="https://icbt.lk/wp-content/uploads/2022/12/ugc.png" width="140px" height="70px">
+                <p>Recognized</p>
+            </div>
+            <div class="container pt-2 box-child-awrd-rank-comp ">
+                <p>Wrold Ranking : {{courses.worldRanking}}</p>
+            </div>
+        </div>
+        <!-- Box Child Uni Comp -->
+        <div class="col-5 box-child-uni-comp">
+            <div class="col" style="margin-left: 20px;">
+                <img [src]="courses.awardedUniImage" width="150px" height="150px" style="border-radius: 50%;">
+            </div>
+            <div class="col">
+                <p>Awarded By The University Of</p>
+                <p class="medium-text">{{courses.awardedUni}}</p>
+            </div>
+        </div>
+        <!-- Box Child Comp -->
+        <div class="col-2 box-child-comp bg-light">
+            <div class="row mt-4 mb-4">
+                <i class="fas fa-clock fa-4x"></i>
+            </div>
+            <div class="row">
+                <p>{{courses.coursetime}}</p>
+            </div>
+            <div class="row ">
+                <p>{{courses.programmeTime}}</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- over view text -->
+    <div class="col overviewText ps-5 pt-5">
+        <p>{{courses.overallidea}}</p>
+    </div>
+
+    <app-student-title-with-content title="ENTRY REQUIREMENTS"
+        content="{{courses.entryRequirement}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="COMMENCEMENT"
+        content="{{courses.commencement}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="COURSE STRUCTURE AND MODULES"
+        content="{{courses.courseStructure}}"></app-student-title-with-content>
+
+    <app-student-title-with-content title="PROGRAMME FEES" content="{{courses.fees}}"></app-student-title-with-content>
+    <br>
+    <br>
+    <br>
+
+</div>
+<div class="container request-bg">
+    <button class="btn custom-button  ps-5 pe-5 pb-2 pt-2" routerLink="/instituteAdmin/{{courses.id}}/editCourse">Edit</button>
+    <button class="btn custom-button ps-5 pe-5 pb-2 pt-2" (click)="deleteCourse($event,courses.id)">Delete</button>
+</div>

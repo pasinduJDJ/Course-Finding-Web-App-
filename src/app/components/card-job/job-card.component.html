@@ -1,0 +1,33 @@
+<div class="container  lgbox" >
+    <div class="imgbox">
+        <img  [src]="job.jobImage" width="150px" height="150px" >
+    </div>
+    <div class="container fullbox">
+        <div class="row ">
+            <div class="col titletext mb-1">
+                <p>{{job.jobTitle}}</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col unioveralltext">
+                <p>{{job.overview}}</p>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row box1">
+            <div class="col finalrow">
+                <p>{{job.jobMode}}</p>
+            </div>
+            <div class="col-3 button"  *ngIf="this.userService.isAdmin">
+                <a class="btn custom-button" routerLink="/admin/{{job.id}}/manageJobs">see more..</a>
+            </div>
+            <div class="col-3 button"  *ngIf="!this.userService.isLoggedIn && !this.userService.isAdmin">
+                <a class="btn custom-button" routerLink="/student/{{job.id}}/fullJob">see more..</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

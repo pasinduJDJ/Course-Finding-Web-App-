@@ -1,0 +1,68 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <p>Add New Part Time Jobs</p>
+        </div>
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/adminJobs" ></i>
+        </div>
+    </div>
+    <div class="container form-bg">
+        <form class="col-10 mt-5 " (ngSubmit)="createJob()">
+            <div class="mb-3">
+                <label class="form-label">Job Name</label>
+                <input type="text" [(ngModel)]="jobTitle" name="jobTitle" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl">Image Url</label>
+                <input type="text" class="form-control" [(ngModel)]="jobImage" name="jobImage"   />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Job Type</label>
+                <input type="text" class="form-control" [(ngModel)]="jobType" name="jobType" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Position</label>
+                <input type="text" class="form-control" [(ngModel)]="position" name="position" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Job Mode</label>
+                <input type="text" class="form-control" [(ngModel)]="jobMode" name="jobMode" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Income</label>
+                <input type="text" class="form-control" [(ngModel)]="income" name="income" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Qualification</label>
+                <textarea type="text" class="form-control" [(ngModel)]="qulification" name="qulification" row="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Job Overview</label>
+                <textarea type="text" class="form-control"[(ngModel)]="overview" name="overview"  row="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" [(ngModel)]="companyMoblie" name="companyMoblie" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">E-Mail Address</label>
+                <input type="text" class="form-control" [(ngModel)]="jobEmail" name="jobEmail" />
+            </div>
+            <div class="btn-bg mt-5 mb-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button  class="btn btn-success">Clear All</button>
+                <button class="btn btn-danger" (click)="navigateToJob()">Cancel</button>
+                <!-- <app-student-btn1-comp [text]="'Done'" ></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Clear all'" ></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Cancel'" ></app-student-btn1-comp> -->
+            </div>
+
+            <br>
+        </form>
+        <br>
+    </div>
+
+
+</div>
+

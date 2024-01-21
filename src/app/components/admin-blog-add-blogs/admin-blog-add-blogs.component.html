@@ -1,0 +1,53 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <p>Add New Blog</p>
+        </div>
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/adminBlogs"></i>
+        </div>
+    </div>
+    <div class="container form-bg">
+        <form class="col-10 mt-5 " (ngSubmit)="createBlog()">
+            <div class="form-group">
+                <label for="blogTitle" >Blog Topic</label>
+                <input type="text" [(ngModel)]="blogTitle" name="blogTitle" class="form-control">
+                <p class="text-danger" style="font-size: 12px;" *ngIf="userForm.controls.blogTitle.invalid && userForm.controls.blogTitle.touched">Blog Title is Required</p>
+            </div>
+            <div class="form-group">
+                <label for="blogName" >Blog Name</label>
+                <input type="text" [(ngModel)]="blogName" name="blogName" class="form-control" >
+                <p class="text-danger" style="font-size: 12px;"  *ngIf="userForm.controls.blogName.invalid && userForm.controls.blogName.touched">Blog Name is Required</p>
+            </div>
+            <div class="form-group">
+                <label for="blogImageUrl">Blog Image Url</label>
+                <input type="text" [(ngModel)]="blogImageUrl" name="blogImageUrl" class="form-control"  />
+                <p class="text-danger" style="font-size: 12px;"  *ngIf="userForm.controls.blogImageUrl.invalid && userForm.controls.blogImageUrl.touched">Blog ImageUrl is Required</p>
+            </div>
+            <div class="form-group">
+                <label for="blogDetail" >Blog Detail</label>
+                <textarea type="text" [(ngModel)]="blogDetail" name="blogDetail" class="form-control" rows="20"></textarea>
+                <p class="text-danger" style="font-size: 12px;"  class="text-sm" *ngIf="userForm.controls.blogDetail.invalid && userForm.controls.blogDetail.touched">Blog Detail is Required</p>
+            </div>
+            <div class="form-group">
+                <label for="publishDate" >Publish Date</label>
+                <input type="text" [(ngModel)]="publishDate" name="publishDate" class="form-control" />
+                <p class="text-danger" style="font-size: 12px;"  *ngIf="userForm.controls.publishDate.invalid && userForm.controls.publishDate.touched">publishDate is Required</p>
+            </div>
+
+            <div class="btn-bg mt-5 mb-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button  class="btn btn-success">Clear All</button>
+                <button class="btn btn-danger" (click)="navigateToBlog()">Cancel</button>
+                <!-- <app-student-btn1-comp [text]="'Done'"></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Clear all'"></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Cancel'"></app-student-btn1-comp> -->
+            </div>
+
+            <br>
+        </form>
+        <br>
+    </div>
+
+
+</div>

@@ -1,0 +1,47 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/institute"></i>
+        </div>
+    </div>
+
+    <!-- Heading Component -->
+    <div class="container content-comp">
+        <div class="col-2 mt-2 title-comp-bg imgbox">
+            <img [src]="institute.insImage" width="200px" height="200px">
+
+        </div>
+        <div class="col-8 mt-2 title-comp-bg">
+            <h4 class="medium-text">{{institute.insName}}
+            </h4>
+            <h6 class="medium-text">{{institute.location}}
+            </h6>
+        </div>
+    </div>
+
+    <!-- over view text -->
+    <div class="col overviewText ps-5 pt-5">
+        <p>{{institute.overview}}</p>
+    </div>
+
+    <app-student-title-with-content title="Contact Details"></app-student-title-with-content>
+    <p class="ps-5">Institute Mobile No : {{institute.insWebsite}}</p>
+    <p class="ps-5">Institute Web Site : {{institute.insWebsite}}</p>
+    <p class="ps-5">Institute Email Address : {{institute.insEmail}}</p>
+
+    <h4 class="subheadtext ps-5 ">Recommanded Banks For Loans</h4>
+    <p class="ps-5 pb-5">{{institute.recommendedBankNo}}</p>
+
+    <!-- <div class="container requement-comp ps-5 mt-5">
+        <h4 class="subheadtext">Courses</h4>
+        <div class="col course-panel">
+            <div class="col courses-card">
+                <app-student-card2-comp [title]="'Bachelor of Software Engineering (Honours)'"
+                    [imageUrl]="'data:image/jpeg;base64,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'"
+                    [content]="'The BSc Software Engineering (Honours) degree of Deakin University is designed to pave the path to produce software engineers who can develop complex ...'"
+                    [subtitle]="'Deakin University  -  4 Years'" [mainbtn]="'See more..'"
+                    routerLink="/fullCourse"></app-student-card2-comp>
+            </div>
+        </div>
+    </div> -->
+</div>

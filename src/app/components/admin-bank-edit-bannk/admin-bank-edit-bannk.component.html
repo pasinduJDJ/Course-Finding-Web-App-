@@ -1,0 +1,68 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <p>Add New Bank Loan</p>
+        </div>
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/adminBlogs" ></i>
+        </div>
+    </div>
+    <div class="container form-bg">
+        <form class="col-10 mt-5" (ngSubmit)="updateBnakLoan()">
+            <div class="mb-3">
+                <label for="bankName" class="form-label">Bank Name</label>
+                <input type="text" class="form-control" [(ngModel)]="bank.bankName" name="bankName">
+            </div>
+            <div class="mb-3">
+                <label for="overview" class="form-label">Bank OverView</label>
+                <textarea type="text" class="form-control" [(ngModel)]="bank.overview" name="overview" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">Bank Logo</label>
+                <textarea type="text" class="form-control" [(ngModel)]="bank.bankLogo" name="imageUrl" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="loanAmount" class="form-label">Loan Amount</label>
+                <textarea type="text" class="form-control" [(ngModel)]="bank.loanAmount" name="loanAmount" rows="5"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="repaymentPeriod" class="form-label">Repayment Period</label>
+                <input type="text" class="form-control"[(ngModel)]="bank.repaymentPeriod" name="repaymentPeriod">
+            </div>
+            <div class="mb-3">
+                <label for="eligibility" class="form-label">Elgibility </label>
+                <textarea type="text" class="form-control" [(ngModel)]="bank.eligibility" name="eligibility" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="requirment" class="form-label">Requirment Document</label>
+                <textarea type="text" class="form-control" [(ngModel)]="bank.requirment" name="requirment" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="mobileNo" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" [(ngModel)]="bank.mobileNo" name="mobileNo">
+            </div>
+            <div class="mb-3">
+                <label for="website" class="form-label">Web Site</label>
+                <input type="text" class="form-control" [(ngModel)]="bank.website" name="website">
+            </div>
+
+
+           
+            <div class="btn-bg mt-5 mb-4">
+                <button type="submit" class="btn custom-button">Submit</button>
+                <button  class="btn custom-button">Clear All</button>
+                <button class="btn custom-button" >Cancel</button>
+                <!-- <app-student-btn1-comp [text]="'Done'" ></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Clear all'" ></app-student-btn1-comp>
+                <app-student-btn1-comp [text]="'Cancel'" ></app-student-btn1-comp> -->
+            </div>
+
+            <br>
+        </form>
+        <br>
+    </div>
+
+
+</div>
+
+

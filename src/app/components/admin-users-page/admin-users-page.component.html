@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="main-bg  mt-5 mb-3">
+        <div class="row">
+            <div class="head-banner-bg">
+                <div class="col-4 row-grid">
+                    <app-admin-card2-comp [no]="noOfUsers" [text]="'Users'"></app-admin-card2-comp>
+                </div>
+                <div class="col-4 row-grid">
+                    <app-admin-btn1-comp routerLink="/addUsers" [btntext]="'Add Users'"></app-admin-btn1-comp>
+                </div>
+                <div class="col-4 row-grid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-title-with-content-btn routerLink="/addUsers"[title]="'User Manage'" [btntext]="'Add Users '"></app-title-with-content-btn>
+        <div class="container">
+            <table class="table table-hover mt-5 ms-4 me-5 mb-5 custom-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Mobile Number</th>
+                        <th scope="col">Institute Register No </th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of user">
+                        <td>{{item.name}}</td>
+                        <td>{{item.userName}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.mobileNo}}</td>
+                        <td>{{item.insRegisterNo}}</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" routerLink="/admin/{{item.insRegisterNo}}/institute" >View</a>
+                            <button class="btn btn-danger btn-sm ms-1" (click)="delete()">Delete</button>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

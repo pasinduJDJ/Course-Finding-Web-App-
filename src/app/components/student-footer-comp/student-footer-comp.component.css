@@ -1,6 +1,9 @@
 .footer-bs {
   background: linear-gradient(to bottom, #c9ccfa, #e6e7fd, #ffffff);
-  padding: 40px 60px;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 40px;
+  /* padding: 40px 140px; */
   color: rgb(0, 0, 0);
   margin-bottom: 20px;
 

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="main-bg  mt-5 mb-3">
+        <div class="row">
+            <div class="head-banner-bg">
+                <div class="col-4 row-grid">
+                    <app-admin-card1-comp [no]="noOfBlogs" [text]="'Active Blogs'"></app-admin-card1-comp>
+                </div>
+                <div class="col-4 row-grid">
+                    <app-admin-btn1-comp routerLink="/addBlogs" [btntext]="'Create New Blogs'"></app-admin-btn1-comp>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-student-title-with-content [title]="'Blogs'"></app-student-title-with-content>
+        <div class="col course-panel mt-4">
+            <div class="col courses-card" *ngFor="let blog of blogs">
+                <app-blog-card  [blog]="blog" ></app-blog-card>
+            </div>
+        </div>
+    </div>
+</div>

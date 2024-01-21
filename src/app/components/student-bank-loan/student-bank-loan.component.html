@@ -1,1 +1,10 @@
-<p>student-bank-loan works!</p>
+<div class="container main-bg">
+    <div class="row main-institute-comp ">
+        <div class="menu-grid ">
+            <div *ngFor="let bank of banks">
+                <app-card-bank  [bank]="bank" > </app-card-bank>
+            </div>
+        </div> 
+    </div>
+
+</div>

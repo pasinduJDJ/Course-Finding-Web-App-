@@ -1,1 +1,32 @@
-<p>student-institute works!</p>
+<div class="container main-bg">
+
+    <!-- Search Bar Row  -->
+    <div class="row header-panel">
+        <div class="colmx-auto">
+            <div class="input-group custom-search-bar">
+                <input type="text" class="form-control" placeholder="Enter Institute Name" (input)="onSearch($event)">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-dark icon-button" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-outline-dark icon-button" type="button">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Institute Row -->
+    <div class="row main-institute-comp ">
+        <div class="row main-5th-comp ">
+            <div class="menu-grid ">
+                <div *ngFor="let institute of this.searchedInstitute">
+                    <app-card-institute [institute]="institute"> </app-card-institute>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

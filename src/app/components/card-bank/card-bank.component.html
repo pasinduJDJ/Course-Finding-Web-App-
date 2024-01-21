@@ -1,0 +1,18 @@
+ <div class="container" style="padding-top:60px;" >
+    <div class="lgbox" *ngIf="this.userService.isAdmin" routerLink="/admin/{{bank.id}}/manageBanks" >
+        <div class="imgbox">
+            <img  [src]="bank.bankLogo" width="150px" height="150px" >
+        </div>
+        <div class="boxtext" >
+            <p>{{bank.bankName}}</p>
+        </div>
+    </div>
+    <div class="lgbox" *ngIf="!this.userService.isLoggedIn" routerLink="/student/{{bank.id}}/fullLoan" >
+        <div class="imgbox">
+            <img  [src]="bank.bankLogo" width="150px" height="150px" >
+        </div>
+        <div class="boxtext" >
+            <p>{{bank.bankName}}</p>
+        </div>
+    </div>
+</div>

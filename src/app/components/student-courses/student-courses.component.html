@@ -1,1 +1,28 @@
-<p>student-courses works!</p>
+<div class="container main-bg">
+
+    <!-- Search Bar Row  -->
+    <div class="row header-panel">
+        <div class="colmx-auto">
+            <div class="input-group custom-search-bar">
+                <input type="text" class="form-control" placeholder="Enter Course Name" (input)="onSearch($event)">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-dark icon-button" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-outline-dark icon-button" type="button">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses Row -->
+    <div class="col course-panel">
+        <div class="col courses-card" *ngFor="let course of this.searchedCourses">
+            <app-course-card [course]="course"> </app-course-card>
+          </div>
+    </div>
+
+</div>

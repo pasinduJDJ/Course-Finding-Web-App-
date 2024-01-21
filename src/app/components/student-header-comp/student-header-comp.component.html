@@ -1,38 +1,83 @@
 <nav class="navbar navbar-expand-lg bg-body-light" style="padding-left: 10%;">
-    <div class="container-fluid d-flex">
-  
-      <div class="header-logo bg-transparent col-lg-2">
-        <img src="assets\image\logo.png" height="80" alt="Logo">
-      </div>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse ms-auto" style="padding-left: 30%;" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item nav-head-text" style="padding-left: 5px">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active" >Home</a>
-          </li>
-          <li class="nav-item" style="padding-left: 20px">
-            <a class="nav-link"  routerLink="/courses" routerLinkActive="active">Courses</a>
-          </li>
-          <li class="nav-item" style="padding-left: 20px">
-            <a class="nav-link"  routerLink="/institute" routerLinkActive="active">Institute</a>
-          </li>
-          <li class="nav-item" style="padding-left: 20px">
-            <a class="nav-link" routerLink="/blogs" routerLinkActive="active">Blogs</a>
-          </li>
-          <li class="nav-item" style="padding-left: 20px">
-            <a class="nav-link" routerLink="/bankloan" routerLinkActive="active">Bank Loans</a>
-          </li>
-          <li class="nav-item" style="padding-left: 20px">
-            <a class="nav-link" routerLink="/jobs" routerLinkActive="active">Part Time Jobs</a>
-          </li>
-        </ul>
-      </div>
-  
+  <div class="container-fluid header-bar d-flex">
+
+    <div class="header-logo bg-transparent col-lg-2">
+      <img src="assets\image\logo.png" height="80" alt="Logo">
     </div>
-  </nav>
-  
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ms-auto " style="padding-left: 30%;" id="navbarNav">
+      <ul class="navbar-nav ">
+
+        <!-- Student Header Title -->
+
+        <ng-template [ngIf]="!this.userService.isLoggedIn && !this.userService.isAdmin">
+          <li class="nav-item nav-head-text" style="padding-left: 5px">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/courses">Courses</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/institute">Institute</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/blogs">Blogs</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/bankloan">Bank Loans</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/jobs">Jobs</a>
+          </li>
+        </ng-template>
+
+        <!-- Institiute Admin -->
+
+        <ng-template [ngIf]="this.userService.isLoggedIn && !this.userService.isAdmin">
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/instituteHome">My Profile</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/instituteCourses">Courses</a>
+          </li>
+        </ng-template>
+
+        <!-- Admin HEader Title -->
+
+        <ng-template [ngIf]="this.userService.isAdmin && this.userService.isLoggedIn">
+          <li class="nav-item nav-head-text" style="padding-left: 5px">
+            <a class="nav-link" routerLink="/adminHome">Home</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/adminUsers">Users</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/adminCourses">Courses</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/adminBlogs">Blogs</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/adminBankLoans">Bank Loans</a>
+          </li>
+          <li class="nav-item" style="padding-left: 20px">
+            <a class="nav-link" routerLink="/adminJobs">Jobs</a>
+          </li>
+        </ng-template>
+
+
+
+        <li class="nav-item" style="padding-left: 20px" *ngIf="this.userService.isLoggedIn">
+          <a class="nav-link" routerLink="/login" (click)="logOut()" routerLinkActive="active">Log Out</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

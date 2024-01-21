@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="main-bg  mt-5 mb-3">
+        <div class="row">
+            <div class="head-banner-bg">
+                <div class="col-4 row-grid">
+                    <app-admin-card1-comp [no]="noOfBlogs" [text]="'Active Jobs'"></app-admin-card1-comp>
+                </div>
+                <div class="col-4 row-grid">
+                    <app-admin-btn1-comp routerLink="/addJobs" [btntext]="'Create New Jobs'"></app-admin-btn1-comp>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-student-title-with-content [title]="'Part Time'"></app-student-title-with-content>
+        <div class="col course-panel">
+            <div class="col courses-card" *ngFor="let job of jobs">
+                <app-job-card routerLink="/manageJobs" [job]="job"></app-job-card>
+            </div>
+           
+        </div>
+    </div>
+</div>

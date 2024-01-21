@@ -1,0 +1,13 @@
+.requement-comp {
+  height: auto;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 5rem;
+}
+.subheadtext {
+  /* margin-top: 10px; */
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ff0844;
+}

@@ -1,0 +1,30 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/bankloan"></i>
+        </div>
+    </div>
+
+    <!-- Heading Component -->
+    <div class="container content-comp">
+        <div class="col-10 mt-2 title-comp-bg">
+            <h3 class="medium-text">{{blogs.blogTopic}}</h3>
+            <p style="margin-top: 15px;">{{blogs.publishDate}}
+            </p>
+        </div>
+        <div class="col-10 title-comp-bg imgbox">
+            <img [src]="blogs.blogImage" width="600px" height="500px">
+
+        </div>
+    </div>
+
+    <app-student-title-with-content content="{{blogs.blogDetails}}"></app-student-title-with-content>
+
+    <br>
+    
+</div>
+
+<div class="container request-bg">
+    <button class="btn custom-button  ps-5 pe-5 pb-2 pt-2" routerLink="/admin/{{blogs.id}}/editBlogs">Edit</button>
+    <button class="btn custom-button ps-5 pe-5 pb-2 pt-2" (click)="deleteBlog($event,blogs.id)">Delete</button>
+</div>

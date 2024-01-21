@@ -1,0 +1,88 @@
+<div class="container main-bg bg-light">
+    <div class="row">
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <p>Add New User</p>
+        </div>
+        <div class="col close-btn-bg " style="margin: 10px;">
+            <i class="fa-solid fa-ban" routerLink="/adminUsers" ></i>
+        </div>
+    </div>
+    <div class="container form-bg">
+        <form class="col-10 mt-5 " (ngSubmit)="createUser()">
+
+            <!-- Start From  -->
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" [(ngModel)]="fullName" name="fullName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Mobile</label>
+                <input type="text" class="form-control"[(ngModel)]="userMobile" name="userMobile"  />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Email</label>
+                <input type="text" class="form-control" [(ngModel)]="userEmail" name="userEmail">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User_name</label>
+                <input type="text" class="form-control" [(ngModel)]="userName" name="userName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User_password</label>
+                <input type="text" class="form-control" [(ngModel)]="userPassword" name="userPassword">
+            </div>
+            <div class="mb-3">
+                <label class="form-label text-primary">Institute Details</label>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Name</label>
+                <input type="text" class="form-control" [(ngModel)]="insName" name="insName" rows="4"/>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Register Number </label>
+                <input type="text" class="form-control" [(ngModel)]="insRegisterNo" name="insRegisterNo" />
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Logo Url</label>
+                <textarea type="text" class="form-control" [(ngModel)]="insImageUrl" name="insImageUrl" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Location</label>
+                <input type="text" class="form-control" [(ngModel)]="insLocation" name="insLocation" rows="4"/>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Overview</label>
+                <textarea type="text" class="form-control" [(ngModel)]="insOverview" name="insOverview" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Start Date</label>
+                <input type="text" class="form-control" [(ngModel)]="insStartDate" name="insStartDate" >
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Mobile Number</label>
+                <input type="text" class="form-control" [(ngModel)]="insMobileNo" name="insMobileNo" >
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Web Site</label>
+                <input type="text" class="form-control" [(ngModel)]="insWebSite" name="insWebSite">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Institute Email</label>
+                <input type="text" class="form-control" [(ngModel)]="insEmail" name="insEmail">
+            </div>
+            <div class="">
+                <label for="programTime" class="form-label">Rcommended Bank for Students</label>
+                <input type="text" class="form-control" [(ngModel)]="recommendedBankNo" name="recommendedBankNo">
+            </div>
+            <div class="btn-bg mt-5 mb-4">
+                <button type="submit" class="btn custom-button">Submit</button>
+                <button  class="btn custom-button">Clear All</button>
+                <button class="btn custom-button" (click)=" navigateToUser()">Cancel</button>
+            </div>
+            <br>
+        </form>
+        <br>
+    </div>
+
+
+</div>
